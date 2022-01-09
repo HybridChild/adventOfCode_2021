@@ -7,8 +7,8 @@ def traceCaveRecursive(initCave, connList, thisRoute, routeList, smallCave):
         for cave in connList[initCave]:
             if cave != 'start' and cave != initCave:
                 if cave.isupper() or cave not in thisRoute or (cave == smallCave and thisRoute.count(smallCave) < 2):
-                        nextRoute = thisRoute.copy()
-                        traceCaveRecursive(cave, connList, nextRoute, routeList, smallCave)
+                    nextRoute = thisRoute.copy()
+                    traceCaveRecursive(cave, connList, nextRoute, routeList, smallCave)
 
 
 # Start
